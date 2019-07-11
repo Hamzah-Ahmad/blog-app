@@ -238,14 +238,14 @@ function blogOwner(req, res, next){
                 }
                 else{
                     req.flash("error", "You do not have the permission to do that");
-                    res.redirect("/blogs");
+                    res.redirect("/blogs/"+foundBlog._id);
                 }
             }
         });
     }
     else{
         req.flash("error", "You need to login to do that");
-        res.redirect("/blogs/"+foundBlog._id);
+        res.redirect("/blogs");
     }
 };
 
