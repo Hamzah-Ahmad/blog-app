@@ -26,7 +26,7 @@ passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
 
 // mongoose.connect("mongodb://localhost/blogs_application");
-mongoose.connect("mongodb+srv://Hamzah:Haz96./.@cluster0-20vtk.mongodb.net/test?retryWrites=true&w=majority", {
+mongoose.connect("mongodb+srv://Hamzah:hamzahpassword@cluster0-20vtk.mongodb.net/test?retryWrites=true&w=majority", {
 	useNewUrlParser: true,
 	useCreateIndex: true
 }).then(() => {
