@@ -1,5 +1,5 @@
 <% include partials/header%>
-<div class="display-2 blog-header"><%=blog.title%></div>
+<div class="display-3 blog-header"><%=blog.title%></div>
     <% if (currentUser && blog.author.id.equals(currentUser._id)) { %>
         <div class="dropdown">
             <i class="far fa-edit"  id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></i>
