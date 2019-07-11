@@ -1,0 +1,20 @@
+<% include partials/header%>
+<div class="display-2 blog-header"><%=blog.title%></div>
+    <% if (currentUser && blog.author.id.equals(currentUser._id)) { %>
+        <div class="dropdown">
+            <i class="far fa-edit"  id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></i>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="/blogs/<%=blog._id%>/edit" class="btn btn-default">Edit</a>
+                <form  action = "/blogs/<%= blog._id%>?_method=DELETE" method="POST" id = "delete-form" >
+                    <button class = "btn btn-default dropdown-item">Delete</button>
+                </form>
+            </div>
+        </div>
+    <% } %>
+
+
+<p><%=blog.content%></p>
+<p class="text-right"><i>—Posted by <%=blog.author.username%> on <%=months[blog.created.getMonth() - 1]%> <%=blog.created.getDate()%>, <%=blog.created.getFullYear()%></i></p>
+
+
+<% include partials/footer%>

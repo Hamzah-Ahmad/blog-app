@@ -1,0 +1,25 @@
+<%include partials/header%>
+</div>
+<div class="jumbotron text-center">
+  <div class = "container">
+    <h1 class="display-2">My Blogs!</h1>
+    <%if(currentUser){%>
+      <a class="btn btn-light btn-lg" href="/blogs/new" role="button">Add New Post</a> 
+    <% } %>
+  </div>
+
+</div>
+<div class = "container">
+<p><%blogs.forEach(function(blog){ %>
+    
+    <a href="/blogs/<%=blog._id%>">
+      <div class = "display-4"><%= blog.title %></div>
+    </a>
+    <small><i>Posted by <%=blog.author.username%> on <%=months[blog.created.getMonth() - 1]%> <%=blog.created.getDate()%>, <%=blog.created.getFullYear()%></i></small>
+    <hr>
+<% })%></p>
+
+
+<%include partials/footer%>
+
+ 
