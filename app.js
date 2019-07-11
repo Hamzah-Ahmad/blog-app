@@ -228,7 +228,7 @@ function blogOwner(req, res, next){
                 res.redriect("/blogs");
             }
             else{
-                if (!foundCampground) {
+                if (!foundBlog) {
                     req.flash("error", "Item not found.");
                     return res.redirect("back");
                 }
