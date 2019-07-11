@@ -13,7 +13,7 @@
 <p><%blogs.forEach(function(blog){ %>
     
     <a href="/blogs/<%=blog._id%>">
-      <div class = "display-4"><%= blog.title %></div>
+      <h2><%= blog.title %></h2>
     </a>
     <small><i>Posted by <%=blog.author.username%> on <%=months[blog.created.getMonth() - 1]%> <%=blog.created.getDate()%>, <%=blog.created.getFullYear()%></i></small>
     <hr>
