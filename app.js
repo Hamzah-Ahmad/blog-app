@@ -27,9 +27,9 @@ passport.deserializeUser(User.deserializeUser());
 
 // mongoose.connect("mongodb://localhost/blogs_application"); --> For localDb
 
-// remember to run heroku config:set MONGOLAB_URI="mongodb+srv://Hamzah:hamzahpassword@cluster0-20vtk.mongodb.net/test?retryWrites=true&w=majority""
+// remember to run heroku config:set MONGOLAB_URI=""
 // in the command line. Otherwise you get an error from heroku
-mongoose.connect("mongodb+srv://Hamzah:hamzahpassword@cluster0-20vtk.mongodb.net/test?retryWrites=true&w=majority", {
+mongoose.connect("", {
 	useNewUrlParser: true,
 	useCreateIndex: true
 }).then(() => {
